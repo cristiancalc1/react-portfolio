@@ -1,0 +1,153 @@
+.about__container{
+    display: grid;
+    grid-template-columns: 35% 50%;
+    gap:15%;
+    
+}
+
+
+.about__me{
+width: 70%;
+aspect-ratio: 1/1;
+border-radius: 2rem;
+background: linear-gradient(45deg, transparent, black, transparent );
+display: grid;
+place-items: center;
+margin-left: 80px;
+} 
+.about__me-image{
+    border-radius: 2rem;
+    overflow: hidden;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+.about__me-image:hover{
+    transform: rotate(0deg);
+}
+
+
+
+
+
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1.5rem;
+    margin-right: 40px;
+}
+.about__card{
+    background: black;
+    border: 1px solid transparent;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    margin-right: 25px;
+   
+    transition: var(--transition);
+    transform: rotate(0deg);
+}
+
+.about__card:hover{
+    background: transparent;
+    border: 2px solid var(--color-primary);
+    cursor: default;
+    
+    transform: rotate(10deg);
+   
+    
+}
+
+.about__icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1.4rem;
+}
+.about__card h5{
+    font-size: 0.96rem;
+}
+.about__card small{
+    font-size: 0.7rem;
+    color: var(--color-light);
+}
+.about__content p{
+    margin: 2rem 0 2.6rem;
+    color:var(--color-light);
+}
+.about__content a{
+   margin-left: 250px;
+   transition: var(--transition)
+
+}
+.about__content a:hover{
+    transform: scale(110%);
+ }
+
+
+
+
+
+
+
+ @media screen and (max-width:1024px) {
+    #about{
+        height: auto;  
+    }
+    .about__me{
+        display: none;
+    }
+   
+    .about__container{
+        display: grid;
+        grid-template-columns: 100%;
+        
+        margin-left: 50px;
+    }
+    .about__card{
+        margin-left: 50px;
+        margin-right: 0px;
+    }
+    .about__content p{
+        margin: 2rem 2.6rem 0rem;
+        color:var(--color-light);
+    }
+    .about__content a{
+        margin-left: 150px;
+        transition: var(--transition)
+     
+     }
+    }
+    /*=========== MEDIA QUERY===(SMALL DEVICE)=====================*/
+    @media screen and (max-width:600px) {
+        header{
+            height: 100vh;
+            width: auto;
+        }
+        .about__cards{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 0.5rem;
+            justify-content: center;
+            align-items: center;
+         
+             }
+             .about__card{
+                height: auto;
+                padding: 1rem;
+               
+             }
+             .about__icon{
+                
+                font-size: 1.4rem;
+                margin-bottom: 0rem;
+            }
+             .about__card h5{
+                
+                display: none;
+            }
+       
+            .about__content a{
+               display: none;
+             
+             }
+    }
+ 
